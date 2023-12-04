@@ -4,7 +4,7 @@
 // @author              Cypher [2641265] with help from Kwack [2190604]
 // @description         BS% in the Battle Stats Box
 // @match               https://www.torn.com/index.php
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=torn.com
+// @icon                https://www.google.com/s2/favicons?sz=64&domain=torn.com
 // ==/UserScript==
 
 //Finds the Battlestats Box on main page
