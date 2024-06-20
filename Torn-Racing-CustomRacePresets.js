@@ -4,7 +4,7 @@
 // @version      0.3
 // @description  Adding quick preset links for dedicated racers.
 // @author       Brainslug [2323221]
-// @match        https://www.torn.com/loader.php?sid=racing*
+// @match        https://www.torn.com/page.php?sid=racing*
 // @updateURL    https://raw.githubusercontent.com/br41nslug/torn-brainscripts/main/scripts/custom-race-presets.user.js
 // @grant        GM_getValue
 // @grant        GM_setValue

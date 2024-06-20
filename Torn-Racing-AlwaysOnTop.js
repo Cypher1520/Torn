@@ -4,7 +4,7 @@
 // @version      0.2
 // @description  Pull you to the top so you don't have to go looking for your position in big races
 // @author       Brainslug [2323221]
-// @match        https://www.torn.com/loader.php?sid=racing*
+// @match        https://www.torn.com/page.php?sid=racing*
 // @updateURL    https://raw.githubusercontent.com/br41nslug/torn-brainscripts/main/scripts/racing-always-on-top.user.js
 // @grant        GM_addStyle
 // ==/UserScript==

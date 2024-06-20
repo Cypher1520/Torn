@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         Racing: Auto Select Car
 // @namespace    https://greasyfork.org/en/scripts/398078-auto-select-car
-// @version      1.4
+// @version      1.5
 // @description  Keeps a record of which car you want to use for each racetrack and removes every other car from the selection menu.
-// @author       Cryosis7 [926640]
-// @match        https://www.torn.com/loader.php?sid=racing
+// @author       Cypher[2641265], (Original author Cryosis7 [926640])
+// @match        https://www.torn.com/page.php?sid=racing*
+// @downloadURL  https://raw.githubusercontent.com/Cypher1520/Torn/main/Torn-Racing-AutoCarSelect.js
+// @updateURL    https://raw.githubusercontent.com/Cypher1520/Torn/main/Torn-Racing-AutoCarSelect.js
 // ==/UserScript==
 
 /**
@@ -38,10 +40,10 @@ const car_track_mappings = {
   /*'Docks': [cars.LexusLFA, cars.ReliantRobin],
     'Uptown': cars.LexusLFA,*/
   Docks: [cars.GT40],
-  Uptown: [cars.Lambo, cars.Lexus, cars.Aston],
+  Uptown: [cars.Lambo, cars.Aston],
   Withdrawal: [cars.Lexus],
   Speedway: [cars.Lexus],
-  Convict: [cars.Lexus, cars.Aston, cars.SLR],
+  Convict: [cars.Aston, cars.SLR],
   Meltdown: [cars.TrackNSX],
   Industrial: [cars.TrackNSX],
   Vector: [cars.TrackNSX],
@@ -132,6 +134,13 @@ function filterCars(carList) {
   });
 }
 
+$(".enlist-link").css({
+  "font-size": "1.2em",
+  border: "3px solid green",
+  "border-radius": "10%",
+  padding: "5px",
+});
+
 /**
  * Generic method to clean up text for comparisons.
  * @param {Text to be scrubbed} text
@@ -147,14 +156,14 @@ function checkEnabled() {
   if (
     $('div.enlisted-btn-wrap:contains("Official race")').length &&
     CONFIG.ENABLED_ON_OFFICIAL
-  )
+  ) {
     return true;
-  else if (
+  } else if (
     $('div.enlisted-btn-wrap:contains(" - "):not(:contains("Official race"))')
       .length &&
     CONFIG.ENABLED_ON_CUSTOM
-  )
+  ) {
     return true;
-
+  }
   return false;
 }
